@@ -14,6 +14,7 @@
     <meta data-react-helmet="true" property="og:image" content="">
     <meta data-react-helmet="true" property="og:title" content="APKS MODS">
     <meta data-react-helmet="true" property="og:url" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style data-styled="" data-styled-version="6.1.13">
         .kjsFmu {
             display: flex;
@@ -718,33 +719,70 @@
             content: "\f00d";
         }
 
-        /* Atualização do layout e cores */
+        /* Atualize as variáveis de cores */
         :root {
-            --primary: #4F46E5;      /* Índigo vibrante */
-            --secondary: #818CF8;    /* Índigo mais claro */
-            --accent: #C7D2FE;      /* Índigo suave */
-            --dark: #111827;        /* Fundo escuro */
-            --darker: #0F172A;      /* Fundo mais escuro */
-            --text: #F9FAFB;        /* Texto claro */
-            --text-secondary: #E5E7EB; /* Texto secundário */
+            --primary: #1a56db;    /* Azul mais escuro */
+            --secondary: #2563eb;  /* Azul médio */
+            --accent: #3b82f6;    /* Azul claro */
+            --dark: #ffffff;      /* Fundo branco */
+            --darker: #f8fafc;    /* Fundo mais claro */
+            --text: #1e293b;      /* Texto escuro */
+            --text-secondary: #64748b; /* Texto secundário */
             --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
         }
 
         /* Melhorias no estilo geral */
         body {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--dark);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        .cta-button {
+            font-size: 0.9rem;
+            padding: 0.7rem 1.8rem;
+        }
+
+        .faq-question {
+            font-size: 0.95rem;
+        }
+
+        .faq-answer {
+            font-size: 0.85rem;
+        }
+
+        .section {
+            padding: 2rem 0;
         }
 
         /* Melhoria nos cards */
         .benefit-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2ff;
             border-radius: 20px;
             padding: 35px 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.4s ease;
         }
 
@@ -801,6 +839,7 @@
 
         /* Melhorias na tabela de comparação */
         .comparison-table {
+            background: #ffffff;
             border-collapse: separate;
             border-spacing: 0;
             margin: 30px 0;
@@ -812,14 +851,21 @@
         .comparison-table th,
         .comparison-table td {
             padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #eef2ff;
+            background: #ffffff;
+            color: var(--text);
         }
 
         .comparison-table th {
             background: var(--primary);
             color: white;
             font-weight: 600;
+        }
+
+        .comparison-table .better {
+            background: rgba(26, 86, 219, 0.05);
+            color: var(--primary);
+            font-weight: 700;
         }
 
         /* Preço com mais destaque */
@@ -842,10 +888,229 @@
 
         /* Footer mais elegante */
         footer {
-            background: var(--darker);
+            background: #ffffff;
             padding: 50px 0;
             margin-top: 50px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid #eef2ff;
+        }
+
+        /* Estilos para o novo banner de urgência */
+        .countdown-banner {
+            background: linear-gradient(135deg, #4432ff 0%, #6e45e2 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .countdown-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .countdown-icon {
+            font-size: 24px;
+        }
+
+        .countdown-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .countdown-timer {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 8px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .countdown-text {
+                font-size: 16px;
+            }
+            .countdown-timer {
+                font-size: 20px;
+            }
+        }
+
+        /* Adicione ou atualize estes estilos na sua seção <style> */
+        .faq-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #eef2ff;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-item::after {
+            content: '▼';
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-item.active::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-question {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        /* FAQ section title */
+        .faq-title {
+            color: var(--primary);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4432ff 0%, #6e45e2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .testimonial {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial p {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--secondary); /* Mantém a cor original para o nome */
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        /* Animações gerais do site */
+        .benefit-card {
+            animation: fadeInUp 0.6s ease backwards;
+        }
+
+        .cta-button {
+            animation: pulse 2s infinite;
+        }
+
+        .hero h1 {
+            animation: slideInDown 1s ease;
+        }
+
+        .price-container {
+            animation: fadeIn 1s ease;
+        }
+
+        /* Keyframes para novas animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Atualize o estilo da seção escura */
+        .section-dark {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(26, 86, 219, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.05) 0%, transparent 30%);
+        }
+
+        /* Atualize o banner de urgência */
+        .urgency-banner {
+            background: var(--gradient);
+            color: white;
+        }
+
+        /* Atualize a garantia */
+        .guarantee {
+            background: #ffffff;
+            border: 2px solid var(--primary);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
     </style>
     <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
@@ -925,7 +1190,7 @@
                                                     href="images/67e366f3b37cd_green_prodpictcoin_1484336210-1.png">
                                                 <meta charset="UTF-8">
                                                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                                <title>Pack Milionário - Conteúdo Exclusivo que Vale Milhões</title>
+                                                <title> Alicativos Premium - Conteúdo Exclusivo que Vale Milhões</title>
                                                 <link rel="preconnect" href="https://fonts.googleapis.com">
                                                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
                                                 <link
@@ -933,13 +1198,13 @@
                                                     rel="stylesheet">
                                                 <style>
                                                     :root {
-                                                        --primary: #4F46E5;
-                                                        --secondary: #818CF8;
-                                                        --accent: #C7D2FE;
-                                                        --dark: #111827;
-                                                        --darker: #0F172A;
-                                                        --text: #F9FAFB;
-                                                        --text-secondary: #E5E7EB;
+                                                        --primary: #1a56db;
+                                                        --secondary: #2563eb;
+                                                        --accent: #3b82f6;
+                                                        --dark: #ffffff;
+                                                        --darker: #f8f9fa;
+                                                        --text: #1e293b;
+                                                        --text-secondary: #64748b;
                                                         --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
                                                     }
 
@@ -953,7 +1218,7 @@
                                                         font-family: 'Manrope', sans-serif;
                                                         background-color: var(--dark);
                                                         color: var(--text);
-                                                        line-height: 1.7;
+                                                        line-height: 1.6;
                                                         overflow-x: hidden;
                                                     }
 
@@ -1000,20 +1265,20 @@
 
                                                     h1 {
                                                         font-size: clamp(2.5rem, 6vw, 4.5rem);
-                                                        font-weight: 900;
+                                                        font-weight: 700;
                                                         margin-bottom: 15px;
                                                         letter-spacing: -1px;
                                                     }
 
                                                     h2 {
                                                         font-size: clamp(2rem, 5vw, 3.5rem);
-                                                        font-weight: 800;
+                                                        font-weight: 600;
                                                         margin: 20px 0 15px;
                                                     }
 
                                                     h3 {
                                                         font-size: clamp(1.5rem, 4vw, 2.2rem);
-                                                        font-weight: 700;
+                                                        font-weight: 500;
                                                         margin: 20px 0 10px;
                                                     }
 
@@ -1094,20 +1359,21 @@
                                                     }
 
                                                     .benefit-card {
-                                                        background: rgba(255, 255, 255, 0.05);
-                                                        backdrop-filter: blur(10px);
+                                                        background: #ffffff;
+                                                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                                                        border: 1px solid #eef2ff;
                                                         border-radius: 20px;
                                                         padding: 35px 25px;
                                                         transition: all 0.4s ease;
-                                                        border: 1px solid rgba(255, 255, 255, 0.1);
                                                         position: relative;
                                                         overflow: hidden;
+                                                        animation: fadeInUp 0.6s ease backwards;
                                                     }
 
                                                     .benefit-card:hover {
                                                         transform: translateY(-10px);
                                                         box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
-                                                        border-color: rgba(79, 70, 229, 0.3);
+                                                        border-color: rgba(18, 129, 255, 0.3);
                                                     }
 
                                                     .benefit-icon {
@@ -1125,12 +1391,13 @@
                                                     }
 
                                                     .guarantee {
-                                                        background: linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(30, 30, 30, 0.4));
+                                                        background: #ffffff;
+                                                        border: 2px solid var(--primary);
+                                                        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
                                                         padding: 30px;
                                                         border-radius: 16px;
                                                         text-align: center;
                                                         margin: 30px 0;
-                                                        border: 2px solid var(--primary);
                                                         position: relative;
                                                         overflow: hidden;
                                                     }
@@ -1239,11 +1506,12 @@
                                                     }
 
                                                     .testimonial {
-                                                        background: rgba(255, 255, 255, 0.05);
-                                                        padding: 20px;
+                                                        background: #ffffff;
+                                                        padding: 25px;
                                                         border-radius: 12px;
                                                         margin: 20px 0;
                                                         border-left: 4px solid var(--primary);
+                                                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
                                                     }
 
                                                     .testimonial-author {
@@ -1265,8 +1533,9 @@
                                                     .comparison-table th,
                                                     .comparison-table td {
                                                         padding: 20px;
-                                                        border: 1px solid rgba(255, 255, 255, 0.1);
-                                                        background: rgba(255, 255, 255, 0.02);
+                                                        border: 1px solid #eef2ff;
+                                                        background: #ffffff;
+                                                        color: var(--text);
                                                     }
 
                                                     .comparison-table th {
@@ -1276,7 +1545,8 @@
                                                     }
 
                                                     .comparison-table .better {
-                                                        background: rgba(0, 255, 163, 0.1);
+                                                        background: rgba(26, 86, 219, 0.05);
+                                                        color: var(--primary);
                                                         font-weight: 700;
                                                     }
 
@@ -1305,10 +1575,13 @@
                                                 </style>
 
 
-                                                <!-- Urgency Banner -->
-                                                <div class="urgency-banner">
-                                                    ⚠️ ATENÇÃO: Esta oferta expira em <span id="countdown">30:00</span>
-                                                    ou quando 50 pessoas comprarem! ⚠️
+                                                <!-- Substitua o banner de urgência existente por este novo código -->
+                                                <div class="countdown-banner">
+                                                    <div class="countdown-content">
+                                                        <span class="countdown-icon">⏳</span>
+                                                        <span class="countdown-text">OFERTA POR TEMPO LIMITADO!</span>
+                                                        <div class="countdown-timer" id="countdown">30:00</div>
+                                                    </div>
                                                 </div>
 
                                                 <section class="hero">
@@ -1525,7 +1798,7 @@
                                                             </div>
 
                                                             <div class="testimonial">
-                                                                <p>"Cancelrei todas minhas assinaturas de streaming e
+                                                                <p>"Cancelei todas minhas assinaturas de streaming e
                                                                     apps premium. Agora tenho tudo em um só lugar, sem
                                                                     pagar mensalidade. Economizo mais de R$300 por mês!"
                                                                 </p>
@@ -1543,12 +1816,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div style="text-align: center; margin-top: 30px;"></div>
-                                                            <h3>NÃO FIQUE DE FORA DESSA OPORTUNIDADE ÚNICA!</h3>
-                                                            <a href="https://acesso.packmilionario.shop/pgrmkt"
-                                                                class="cta-button pulse">QUERO MEU ACESSO IMEDIATO!
-                                                                ➤</a>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </section>
 
@@ -1590,51 +1858,28 @@
 
                                                 <section class="section">
                                                     <div class="container">
-                                                        <h2>PERGUNTAS FREQUENTES:</h2>
+                                                        <h2 class="faq-title">PERGUNTAS FREQUENTES:</h2>
 
-                                                        <div class="benefit-card" style="margin-bottom: 20px;">
-                                                            <h3>Como recebo o acesso?</h3>
-                                                            <p>Imediatamente após a confirmação do pagamento, você
-                                                                receberá um e-mail com todas as instruções para acessar
-                                                                APLICATIVOS PREMIUM.</p>
-                                                        </div>
-
-                                                        <div class="benefit-card" style="margin-bottom: 20px;">
-                                                            <h3>Posso revender esse conteúdo?</h3>
-                                                            <p>Sim! Muitos de nossos clientes revendem os cursos e
-                                                                ferramentas com lucro. Você terá direito total de uso
-                                                                comercial.</p>
-                                                        </div>
-
-                                                        <div class="benefit-card" style="margin-bottom: 20px;">
-                                                            <h3>Os apps realmente funcionam?</h3>
-                                                            <p>Sim! Todos os aplicativos foram testados e aprovados por
-                                                                nossa equipe. Caso algum pare de funcionar, atualizamos
-                                                                com versões novas no grupo VIP.</p>
-                                                        </div>
-
-                                                        <div class="benefit-card">
-                                                            <h3>Por que tão barato?</h3>
-                                                            <p>Porque acreditamos que conhecimento e ferramentas premium
-                                                                devem ser acessíveis a todos, não apenas a quem pode
-                                                                pagar fortunas!</p>
-                                                        </div>
-
-                                                        <div style="text-align: center; margin-top: 40px;">
-                                                            <h2>NÃO DEIXE ESSA CHANCE PASSAR!</h2>
-                                                            <p
-                                                                style="font-size: 1.4rem; margin: 20px 0; font-weight: 500;">
-                                                                Amanhã o preço volta para R$97,00. Garanta seu acesso
-                                                                por apenas R$19,90 agora!</p>
-
-                                                            <div style="display: inline-block; margin: 20px 0;">
-                                                                <span class="old-price">De R$97,00</span>
-                                                                <span class="new-price">HOJE APENAS R$19,90</span>
+                                                        <div class="faq-section">
+                                                            <div class="faq-item">
+                                                                <p class="faq-question">Como recebo o acesso?</p>
+                                                                <p class="faq-answer">Imediatamente após a confirmação do pagamento, você receberá um e-mail com todas as instruções para acessar APLICATIVOS PREMIUM.</p>
                                                             </div>
 
-                                                            <a href="https://acesso.packmilionario.shop/pgrmkt"
-                                                                class="cta-button pulse">QUERO MEU PACK MILIONÁRIO!
-                                                                ➤</a>
+                                                            <div class="faq-item">
+                                                                <p class="faq-question">Posso revender esse conteúdo?</p>
+                                                                <p class="faq-answer">Sim! Muitos de nossos clientes revendem os cursos e ferramentas com lucro. Você terá direito total de uso comercial.</p>
+                                                            </div>
+
+                                                            <div class="faq-item">
+                                                                <p class="faq-question">Os apps realmente funcionam?</p>
+                                                                <p class="faq-answer">Sim! Todos os aplicativos foram testados e aprovados por nossa equipe. Caso algum pare de funcionar, atualizamos com versões novas no grupo VIP.</p>
+                                                            </div>
+
+                                                            <div class="faq-item">
+                                                                <p class="faq-question">Por que tão barato?</p>
+                                                                <p class="faq-answer">Porque acreditamos que conhecimento e ferramentas premium devem ser acessíveis a todos, não apenas a quem pode pagar fortunas!</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </section>
@@ -1642,7 +1887,7 @@
                                                 <footer
                                                     style="background-color: var(--darker); padding: 50px 0; text-align: center; margin-top: 50px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
                                                     <div class="container">
-                                                        <p>© 2025 Pack Milionário - Todos os direitos reservados</p>
+                                                        <p>© 2025 LibertyApps Pro - Todos os direitos reservados</p>
                                                         <p
                                                             style="margin-top: 10px; font-size: 0.9rem; color: var(--text-secondary);">
                                                             Este produto não tem afiliação com Google, YouTube, Spotify
@@ -1655,8 +1900,68 @@
                                                     </div>
                                                 </footer>
 
-                                                <script></script>
-                                                   
+                                                <script>
+                                                    function startCountdown() {
+                                                        let duration = 30 * 60; // 30 minutos em segundos
+                                                        const display = document.getElementById('countdown');
+                                                        
+                                                        let timer = duration;
+                                                        const interval = setInterval(function () {
+                                                            const minutes = parseInt(timer / 60, 10);
+                                                            const seconds = parseInt(timer % 60, 10);
+
+                                                            display.textContent = minutes.toString().padStart(2, '0') + ':' 
+                                                                                + seconds.toString().padStart(2, '0');
+
+                                                            if (--timer < 0) {
+                                                                clearInterval(interval);
+                                                                display.textContent = "EXPIRADO";
+                                                            }
+                                                        }, 1000);
+                                                    }
+
+                                                    // Inicia o cronômetro quando a página carrega
+                                                    document.addEventListener('DOMContentLoaded', startCountdown);
+                                                </script>
+
+                                                <script>
+                                                    document.addEventListener('DOMContentLoaded', function() {
+                                                        const faqItems = document.querySelectorAll('.faq-item');
+                                                        
+                                                        faqItems.forEach(item => {
+                                                            item.addEventListener('click', () => {
+                                                                const answer = item.querySelector('.faq-answer');
+                                                                const isOpen = item.classList.contains('active');
+                                                                
+                                                                // Fecha todos os itens
+                                                                faqItems.forEach(otherItem => {
+                                                                    otherItem.classList.remove('active');
+                                                                    otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
+                                                                });
+                                                                
+                                                                // Abre o item clicado
+                                                                if (!isOpen) {
+                                                                    item.classList.add('active');
+                                                                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                                                                }
+                                                            });
+                                                        });
+                                                        
+                                                        // Adiciona animação de entrada aos elementos quando ficam visíveis
+                                                        const observer = new IntersectionObserver((entries) => {
+                                                            entries.forEach(entry => {
+                                                                if (entry.isIntersecting) {
+                                                                    entry.target.style.animation = 'fadeInUp 0.6s ease backwards';
+                                                                    observer.unobserve(entry.target);
+                                                                }
+                                                            });
+                                                        }, {
+                                                            threshold: 0.1
+                                                        });
+
+                                                        document.querySelectorAll('.benefit-card, .testimonial, .comparison-table, .guarantee')
+                                                            .forEach(el => observer.observe(el));
+                                                    });
                                                 </script>
 
                                             </div>
@@ -1694,45 +1999,13 @@
                                                 <script async=""
                                                     src="https://www.googletagmanager.com/gtag/js?id=G-GF0TMHHH8G"></script>
                                                 <script>
-                                                    window.dataLayer = window.dataLayer || [];
-                                                    function gtag() { dataLayer.push(arguments); }
-                                                    gtag('js', new Date());
-
-                                                    gtag('config', 'G-GF0TMHHH8G');
-                                                </script>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div data-testid="popup" class="sc-iWeKus hLScLS">
-                <div class="sc-ccAZvV idaFgm">
-                    <div overflow="auto" id="popup-bb535a6d" data-nosnippet="true" class="sc-eABdvX fKrMwH">
-                        <div id="popup-scroll-content-ui" class="sc-guDsmt cPxaeL"><a href="#"
-                                data-testid="popup-close-icon" class="sc-fVHand eGvJgg"></a>
-                            <div class="sc-cZmpHc edTFYI">
-                                <div class="sc-fQMQIz cGuMrp">
-                                    <div style="background-size:initial;background-position:50% 50%;background-repeat:repeat;background-attachment:initial"
-                                        id="row-c8686bd1" class="sc-tmKvc dESzU">
-                                        <div size="12" class="sc-ajmIN kjsFmu">
-                                            <div class="sc-fQMQIz cGuMrp">
-                                                <div id="video-227ecc03" class="sc-UpyDF guUqMK"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="sc-bHbnRu eRkAAN">
                     <div class="sc-gcTmrT jZSkNP"></div>
                 </div>
             </div>
         </div>
     </div>
-    <script data-cookieconsent="ignore"
+    <script data-cookieconsent="ignore"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+:root {
+  --primary: #1a55e5;    /* Azul royal */
+  --secondary: #3d7dff;  /* Azul royal mais claro */
+  --accent: #e8f0ff;    /* Azul muito claro */
+  --dark: #ffffff;      /* Fundo branco */
+  --darker: #f8f9fa;    /* Fundo cinza muito claro */
+  --text: #1a55e5;      /* Texto azul royal */
+  --text-secondary: #6c757d; /* Texto secundário cinza */
+  --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 14px; /* Fonte base menor */
+}
+
+h1 {
+  font-size: 2rem; /* Reduzido de 2.5rem */
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 1.6rem; /* Reduzido de 2rem */
+  font-weight: 600;
+  margin: 1.2rem 0 0.8rem;
+}
+
+h3 {
+  font-size: 1.3rem; /* Reduzido de 1.5rem */
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+
+p {
+  font-size: 0.9rem; /* Texto geral menor */
+  line-height: 1.4;
+}
+
+.cta-button {
+  font-size: 0.9rem; /* Botão com fonte menor */
+  padding: 0.7rem 1.8rem;
+}
+
+.faq-question {
+  font-size: 0.95rem;
+}
+
+.faq-answer {
+  font-size: 0.85rem;
+}
+
+/* Banner de contagem regressiva mais sutil */
+.countdown-banner {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eef2ff;
+}
+
+.countdown-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.countdown-text {
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown-timer {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--primary);
+  background: rgba(26, 86, 219, 0.1);
+  padding: 5px 15px;
+  border-radius: 8px;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Preços mais clean */
+.old-price {
+  font-size: 1rem;
+}
+
+.new-price {
+  font-size: 1.8rem;
+}
+
+/* Tabela mais compacta */
+.comparison-table th,
+.comparison-table td {
+  padding: 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Seções com menos espaçamento */
+.section {
+  padding: 2rem 0;
+}
+
+/* Cards mais compactos */
+.benefit-card {
+  padding: 1.2rem;
+}
+
+.testimonial {
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+.testimonial-author {
+  font-size: 0.8rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 0 20px;
+  position: relative;
+  background: #ffffff; /* Fundo branco */
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text);
+}
