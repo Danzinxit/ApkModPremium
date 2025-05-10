@@ -1,0 +1,70 @@
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .benefits-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .benefit-card {
+        flex: 1;
+        max-width: 380px;
+        min-width: 300px;
+        margin: 0;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .benefit-card h3 {
+        font-size: 1.8rem;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .benefit-card p {
+        text-align: center;
+    }
+
+    .benefit-card ul {
+        text-align: left;
+        margin: 20px auto;
+    }
+
+    .video-container {
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+/* Responsive Styles (mantendo os existentes) */
+@media (max-width: 768px) {
+    .benefits-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 0 8px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .benefit-card {
+        width: 100% !important;
+        max-width: 420px !important;
+        margin: 0 auto !important;
+        padding: 22px 12px !important;
+    }
+} 

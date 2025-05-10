@@ -1656,12 +1656,12 @@
         /* Estilos otimizados para cards e vídeos */
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin: 30px auto;
             padding: 0 15px;
             max-width: 1200px;
-            justify-items: start;
+            justify-items: center;
         }
 
         .benefit-card {
@@ -1837,6 +1837,1161 @@
             .comparison-table th {
                 font-size: 0.9rem;
             }
+        }
+    </style>
+
+    <style>
+        /* Remove scrollbars e ajusta overflow */
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+            width: 100% !important;
+            -ms-overflow-style: none !important;  /* IE e Edge */
+            scrollbar-width: none !important;  /* Firefox */
+        }
+
+        html::-webkit-scrollbar, 
+        body::-webkit-scrollbar {
+            display: none !important;  /* Chrome, Safari e Opera */
+        }
+
+        /* Ajustes para o cronômetro responsivo */
+        .countdown-banner {
+            overflow: hidden !important;
+            max-width: 100% !important;
+            padding: 15px 10px !important;
+        }
+
+        .countdown-timer {
+            display: inline-block !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            max-width: 100% !important;
+        }
+
+        @media (max-width: 480px) {
+            .countdown-banner {
+                padding: 10px 5px !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .countdown-timer {
+                font-size: 1.2rem !important;
+                padding: 5px 10px !important;
+            }
+        }
+
+        /* Garante que containers não gerem scrollbars horizontais */
+        .container,
+        .section,
+        .benefits-grid,
+        .testimonials-grid,
+        .comparison-table,
+        .video-container {
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            box-sizing: border-box !important;
+        }
+    </style>
+
+    <style>
+        /* Remover scrollbars de elementos específicos */
+        .video-container,
+        .benefit-card,
+        .testimonial,
+        .faq-item,
+        .comparison-table,
+        .table-responsive {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+            overflow: hidden !important;
+        }
+
+        .video-container::-webkit-scrollbar,
+        .benefit-card::-webkit-scrollbar,
+        .testimonial::-webkit-scrollbar,
+        .faq-item::-webkit-scrollbar,
+        .comparison-table::-webkit-scrollbar,
+        .table-responsive::-webkit-scrollbar {
+            display: none !important;
+        }
+
+        /* Ajustes para garantir que não haja overflow horizontal */
+        * {
+            max-width: 100vw !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Ajuste para o container principal */
+        #app {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            max-width: 100vw !important;
+            position: relative !important;
+        }
+    </style>
+
+    <style>
+        /* Ajuste para a seção de garantia */
+        .guarantee {
+            background: #ffffff;
+            border: 2px solid var(--primary);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* Ajuste para o primeiro vídeo */
+        .hero-video {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-video video {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Garantir que não haja scrollbar horizontal */
+        .section-dark {
+            overflow: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Ajuste para textos responsivos */
+        @media (max-width: 768px) {
+            .guarantee {
+                padding: 15px 10px;
+                margin: 15px auto;
+            }
+            
+            .hero-video {
+                max-width: 100%;
+                margin: 0 auto 15px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Ajustes específicos para a seção de preço e garantia */
+        .price-container,
+        .guarantee-section {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 20px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /* Ajuste para o texto do preço */
+        .new-price {
+            font-size: clamp(2rem, 5vw, 4rem);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Ajuste para os ícones de check */
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .features-list span {
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @media (max-width: 480px) {
+            .price-container,
+            .guarantee-section {
+                padding: 15px 10px;
+            }
+
+            .new-price {
+                font-size: clamp(1.8rem, 4vw, 2.5rem);
+            }
+        }
+    </style>
+
+    <style>
+        /* Reset global para remover todas as scrollbars */
+        * {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+        }
+
+        *::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        /* Ajustes específicos para body e html */
+        html, body {
+            overflow: auto !important;
+            overflow-x: hidden !important;
+            width: 100% !important;
+            max-width: 100vw !important;
+            position: relative !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Container principal */
+        #app, .sc-cOfyym, .sc-fQMQIz {
+            width: 100% !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            position: relative !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Ajustes para elementos específicos */
+        .container,
+        .section,
+        .hero,
+        .benefits-grid,
+        .testimonials-grid,
+        .comparison-table,
+        .video-container,
+        .guarantee,
+        .price-container,
+        .countdown-banner,
+        .faq-section {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .container,
+            .section,
+            .hero,
+            .benefits-grid,
+            .testimonials-grid,
+            .comparison-table,
+            .video-container,
+            .guarantee,
+            .price-container,
+            .countdown-banner,
+            .faq-section {
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .table-responsive {
+                overflow-x: hidden !important;
+            }
+        }
+
+        /* Garantir que textos longos não causem overflow */
+        h1, h2, h3, p, span, div {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            max-width: 100% !important;
+        }
+    </style>
+
+    <style>
+        /* Ajustes para elementos que podem gerar scrollbar */
+        .sc-tmKvc,
+        .sc-ajmIN,
+        .sc-iLnaUn,
+        .sc-fOSqom,
+        .sc-dLoHQq,
+        .sc-cOfyym,
+        .sc-dbQVDs,
+        .sc-UpyDF {
+            overflow: hidden !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            position: relative !important;
+        }
+
+        /* Ajuste para garantir que imagens e vídeos não causem overflow */
+        img, video {
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+        }
+
+        /* Ajuste para elementos flex que podem causar overflow */
+        [class*="sc-"] {
+            max-width: 100vw !important;
+            overflow: hidden !important;
+        }
+
+        /* Ajuste específico para o container do cronômetro */
+        .countdown-banner,
+        .countdown-content,
+        .countdown-timer {
+            white-space: normal !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            max-width: 100% !important;
+        }
+
+        /* Garantir que grids não causem overflow */
+        .benefits-grid,
+        .testimonials-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 20px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+        }
+    </style>
+
+    <style>
+        /* Estilo destacado para o preço */
+        .price-highlight {
+            background: linear-gradient(135deg, #FF6B6B, #FF4B2B);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+            margin: 30px auto;
+            display: block;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            transform: scale(1);
+            transition: all 0.3s ease;
+            animation: pulse-price 2s infinite;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .price-highlight .old-price {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 2.5rem;
+            text-decoration: line-through;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .price-highlight .new-price {
+            color: #ffffff;
+            font-size: 4rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: -1px;
+            display: block;
+            line-height: 1.2;
+        }
+
+        @keyframes pulse-price {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+            }
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .price-highlight {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            .price-highlight .old-price {
+                font-size: 2rem;
+            }
+
+            .price-highlight .new-price {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .price-highlight {
+                padding: 15px;
+                margin: 15px auto;
+            }
+
+            .price-highlight .old-price {
+                font-size: 1.8rem;
+            }
+
+            .price-highlight .new-price {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Efeito de brilho */
+        .price-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        /* Ícone de destaque */
+        .price-highlight::after {
+            content: '🔥';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 1.5rem;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+
+    <style>
+        /* Estilo para o texto da promoção no topo */
+        .promo-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+            padding: 12px 25px;
+            border-radius: 12px;
+            box-shadow: 
+                0 8px 20px rgba(99, 102, 241, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            margin: 10px auto;
+            position: relative;
+            overflow: hidden;
+            transform: translateZ(0);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .promo-top .old-price {
+            position: relative;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: line-through;
+            opacity: 0.9;
+        }
+
+        .promo-top .new-price {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-shadow: 
+                2px 2px 4px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(255, 255, 255, 0.2);
+            letter-spacing: -0.5px;
+        }
+
+        /* Remover a versão duplicada de baixo */
+        .price-highlight {
+            display: none;
+        }
+    </style>
+
+    <style>
+        /* Estilos para desktop */
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 30px !important;
+                margin: 30px auto !important;
+                padding: 0 15px !important;
+                max-width: 1200px !important;
+                justify-items: center !important;
+            }
+
+            .testimonials-grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 30px !important;
+                margin: 30px auto !important;
+                max-width: 1200px !important;
+                padding: 0 20px !important;
+            }
+
+            .container {
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                padding: 0 20px !important;
+            }
+
+            .hero-content {
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                padding: 0 20px !important;
+            }
+
+            .comparison-table {
+                width: 100% !important;
+                max-width: 1000px !important;
+                margin: 30px auto !important;
+            }
+
+            .price-container,
+            .guarantee,
+            .faq-section,
+            .countdown-banner,
+            .urgency-banner {
+                max-width: 800px !important;
+                margin: 30px auto !important;
+            }
+
+            .benefit-card,
+            .testimonial {
+                width: 100% !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
+        }
+    </style>
+
+    <style>
+        .promo-top {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            width: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            pointer-events: none !important;
+        }
+    </style>
+
+    <style>
+        @media (min-width: 1024px) {
+            .table-responsive {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 1200px !important;
+                margin: 30px auto !important;
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+
+            .comparison-table {
+                width: 100% !important;
+                max-width: 900px !important;
+                margin: 0 auto !important;
+                border-collapse: separate !important;
+                border-spacing: 0 !important;
+                border-radius: 15px !important;
+                overflow: hidden !important;
+                table-layout: fixed !important;
+                background: white !important;
+            }
+
+            .comparison-table th {
+                background: var(--primary) !important;
+                color: white !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.5px !important;
+                padding: 20px 15px !important;
+                text-align: center !important;
+                font-size: 0.95rem !important;
+            }
+
+            .comparison-table td {
+                padding: 20px 15px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+                border: 1px solid rgba(99, 102, 241, 0.1) !important;
+                font-size: 1rem !important;
+                line-height: 1.4 !important;
+            }
+
+            .comparison-table tr:hover td {
+                background: rgba(99, 102, 241, 0.02) !important;
+            }
+
+            .comparison-table td:first-child {
+                text-align: left !important;
+                padding-left: 25px !important;
+                font-weight: 500 !important;
+            }
+
+            .comparison-table td:last-child {
+                font-weight: 700 !important;
+                color: var(--primary) !important;
+            }
+
+            .comparison-table .better {
+                color: var(--primary) !important;
+                font-weight: 700 !important;
+                background: rgba(99, 102, 241, 0.05) !important;
+            }
+        }
+    </style>
+
+    <style>
+        @media (min-width: 1024px) {
+            .section-dark {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                padding: 80px 0 !important;
+            }
+
+            .container {
+                width: 100% !important;
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+                padding: 0 20px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            h2 {
+                text-align: center !important;
+                width: 100% !important;
+                margin-bottom: 40px !important;
+            }
+
+            .table-responsive {
+                width: 100% !important;
+                overflow: visible !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .comparison-table {
+                box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1) !important;
+                transform: translateY(0) !important;
+                transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            }
+
+            .comparison-table:hover {
+                transform: translateY(-5px) !important;
+                box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15) !important;
+            }
+        }
+    </style>
+
+    <style>
+        @media (min-width: 1024px) {
+            .comparison-table {
+                width: 100% !important;
+                max-width: 900px !important;
+                margin: 0 auto !important;
+                border-collapse: separate !important;
+                border-spacing: 0 !important;
+                border-radius: 15px !important;
+                overflow: hidden !important;
+                table-layout: fixed !important;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                text-align: center !important;
+                vertical-align: middle !important;
+                padding: 20px 15px !important;
+                font-size: 1rem !important;
+                width: 33.33% !important;
+                white-space: nowrap !important;
+            }
+
+            .comparison-table td:first-child {
+                text-align: left !important;
+                font-weight: 500 !important;
+                white-space: normal !important;
+            }
+
+            .comparison-table td:not(:first-child) {
+                font-weight: 600 !important;
+            }
+
+            .comparison-table .better {
+                background: rgba(99, 102, 241, 0.05) !important;
+                color: var(--primary) !important;
+                font-weight: 700 !important;
+            }
+
+            /* Ajuste específico para a coluna do meio */
+            .comparison-table td:nth-child(2) {
+                color: #64748b !important;
+            }
+
+            /* Ajuste específico para a última coluna */
+            .comparison-table td:last-child {
+                color: var(--primary) !important;
+                background: rgba(99, 102, 241, 0.05) !important;
+            }
+        }
+    </style>
+
+    <style>
+        /* Estilos responsivos para FAQ */
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 20px 15px !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+            }
+
+            .faq-title {
+                font-size: 1.8rem !important;
+                text-align: center !important;
+                margin-bottom: 25px !important;
+                color: var(--primary) !important;
+                font-weight: 700 !important;
+                letter-spacing: -0.5px !important;
+            }
+
+            .faq-item {
+                background: #ffffff !important;
+                border-radius: 15px !important;
+                padding: 15px !important;
+                margin-bottom: 15px !important;
+                box-shadow: 0 4px 15px rgba(99, 102, 241, 0.08) !important;
+                border: 1px solid rgba(99, 102, 241, 0.1) !important;
+                transition: all 0.3s ease !important;
+            }
+
+            .faq-question {
+                font-size: 1.1rem !important;
+                font-weight: 600 !important;
+                color: var(--primary) !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                cursor: pointer !important;
+                padding: 5px !important;
+            }
+
+            .faq-question::after {
+                content: '▼' !important;
+                font-size: 0.8rem !important;
+                color: var(--primary) !important;
+                transition: transform 0.3s ease !important;
+            }
+
+            .faq-item.active .faq-question::after {
+                transform: rotate(180deg) !important;
+            }
+
+            .faq-answer {
+                height: 0 !important;
+                overflow: hidden !important;
+                opacity: 0 !important;
+                transition: all 0.3s ease-in-out !important;
+                padding: 0 5px !important;
+                margin-top: 0 !important;
+                color: var(--text-secondary) !important;
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+
+            .faq-item.active {
+                background: rgba(99, 102, 241, 0.02) !important;
+                border-color: rgba(99, 102, 241, 0.2) !important;
+                box-shadow: 0 8px 20px rgba(99, 102, 241, 0.12) !important;
+            }
+
+            .faq-item.active .faq-answer {
+                height: auto !important;
+                opacity: 1 !important;
+                padding: 15px 5px !important;
+                margin-top: 10px !important;
+                border-top: 1px solid rgba(99, 102, 241, 0.1) !important;
+            }
+
+            .faq-item:hover {
+                transform: translateX(5px) !important;
+                box-shadow: 0 6px 18px rgba(99, 102, 241, 0.15) !important;
+            }
+        }
+
+        /* Estilos específicos para telas muito pequenas */
+        @media (max-width: 480px) {
+            .faq-section {
+                padding: 15px 10px !important;
+            }
+
+            .faq-title {
+                font-size: 1.5rem !important;
+                margin-bottom: 20px !important;
+            }
+
+            .faq-item {
+                padding: 12px !important;
+                margin-bottom: 12px !important;
+                border-radius: 12px !important;
+            }
+
+            .faq-question {
+                font-size: 1rem !important;
+                padding: 3px !important;
+            }
+
+            .faq-answer {
+                font-size: 0.95rem !important;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 12px 3px !important;
+            }
+        }
+    </style>
+
+    <style>
+    /* Estilos para o container de preço */
+    .new-price,
+    .old-price {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .new-price {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--primary);
+    }
+
+    .old-price {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        text-decoration: line-through;
+        opacity: 0.7;
+    }
+
+    /* Container principal do preço */
+    .price-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 15px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+        .price-container {
+            padding: 10px;
+        }
+        
+        .new-price {
+            font-size: 1.8rem;
+            padding: 3px 8px;
+        }
+        
+        .old-price {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .price-container {
+            padding: 8px;
+        }
+        
+        .new-price {
+            font-size: 1.6rem;
+            padding: 2px 5px;
+        }
+        
+        .old-price {
+            font-size: 1.1rem;
+        }
+    }
+    </style>
+
+    <style>
+        /* Ajustes adicionais para garantir alinhamento responsivo */
+        .price-highlight,
+        .price-container,
+        .new-price,
+        .old-price {
+            max-width: 100vw !important;
+            overflow: hidden !important;
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Prevenir quebra de linha indesejada */
+        .new-price span,
+        .old-price span {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        /* Ajuste específico para telas muito pequenas */
+        @media (max-width: 360px) {
+            .new-price,
+            .old-price {
+                padding: 2px;
+                font-size: 90%;
+            }
+            
+            .price-container {
+                padding: 5px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Reset global para garantir responsividade */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        /* Ajustes para o container principal */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            overflow-x: hidden;
+        }
+
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .hero-headline h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                padding: 0;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 0 10px;
+            }
+
+            .benefit-card {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 15px;
+            }
+
+            .video-container {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            .comparison-table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .price-highlight {
+                width: 100%;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 100%;
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .testimonial {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .faq-section {
+                padding: 0 10px;
+            }
+        }
+
+        /* Ajustes para telas muito pequenas */
+        @media (max-width: 480px) {
+            .hero-headline h1 {
+                font-size: 1.5rem;
+            }
+
+            .new-price {
+                font-size: 1.8rem;
+            }
+
+            .old-price {
+                font-size: 1.2rem;
+            }
+
+            .benefit-card {
+                padding: 10px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Garantir que vídeos sejam responsivos */
+        video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+
+        /* Ajuste para o scroll horizontal */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+
+    <style>
+        /* Ajustes específicos para garantir que o texto do preço apareça corretamente */
+        @media (max-width: 768px) {
+            .new-price {
+                font-size: 24px !important;
+                line-height: 1.2 !important;
+                padding: 8px !important;
+                margin: 5px auto !important;
+                display: block !important;
+                width: auto !important;
+                max-width: 100% !important;
+                white-space: normal !important;
+                word-wrap: break-word !important;
+                text-align: center !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .new-price {
+                font-size: 20px !important;
+                padding: 5px !important;
+                margin: 3px auto !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .new-price {
+                font-size: 18px !important;
+                padding: 3px !important;
+            }
+        }
+
+        /* Container responsivo para o preço */
+        .price-container {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 10px auto !important;
+            padding: 5px !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+        }
+
+        /* Garantir que o texto não quebre em duas linhas */
+        .new-price span {
+            display: inline-block !important;
+            white-space: nowrap !important;
         }
     </style>
 
@@ -2286,11 +3441,11 @@
                                                                 </video>
                                                             </div>
 
-                                                            <div class="hero-offer">
-                                                                <div class="price-tag">
-                                                                    <span class="original-price">De R$97,00</span>
-                                                                    <span class="current-price">HOJE APENAS
-                                                                        R$19,90</span>
+                                                        
+                                                                        <div class="price-container">
+                                                                            <span class="new-price">De R$97,00 <BR></BR> HOJE APENAS R$19,90</span>
+                                                                        </div>
+                        
                                                                 </div>
 
                                                                 <a href="https://acesso.packmilionario.shop/pgrmkt"
@@ -2671,6 +3826,22 @@
                                                     });
                                                 </script>
 
+                                                <!-- Adicionar o elemento de preço destacado -->
+                                                
+
+                                                <!-- Remover os estilos */
+                                                /* Remover todo o bloco de estilo do promo-top */
+                                                .promo-top {
+                                                    display: none !important;
+                                                }
+
+                                                /* Remover o elemento HTML */
+                                                <div class="promo-top">
+                                                    <span class="old-price">De R$97,00</span>
+                                                    <span class="new-price">HOJE APENAS R$19,90</span>
+                                                </div>
+
+                                               
                                             </div>
                                         </div>
                                     </div>
