@@ -26,6 +26,59 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '969415968416379');
     fbq('track', 'PageView');
+
+    // Evento de visualização de conteúdo
+    fbq('track', 'ViewContent', {
+        content_name: 'Aplicativos Premium',
+        content_category: 'Produto Digital',
+        content_type: 'product',
+        value: 19.90,
+        currency: 'BRL'
+    });
+
+    // Evento de clique no botão de compra
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Aplicativos Premium',
+                    content_category: 'Produto Digital',
+                    value: 19.90,
+                    currency: 'BRL'
+                });
+            });
+        });
+    });
+
+    // Evento de visualização de vídeo
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('play', function() {
+                fbq('track', 'VideoPlay', {
+                    content_name: 'Vídeo Demonstrativo',
+                    content_category: 'Vídeo'
+                });
+            });
+        });
+    });
+
+    // Evento de visualização de depoimentos
+    document.addEventListener('DOMContentLoaded', function() {
+        const testimonials = document.querySelectorAll('.testimonial');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Depoimentos',
+                        content_category: 'Social Proof'
+                    });
+                }
+            });
+        });
+        testimonials.forEach(testimonial => observer.observe(testimonial));
+    });
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=969415968416379&ev=PageView&noscript=1"
